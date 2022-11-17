@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="352.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SetContatoController">
+   <children>
+      <TextField fx:id="txtNome" layoutX="90.0" layoutY="42.0" prefHeight="26.0" prefWidth="264.0" />
+      <TextField fx:id="txtEnder" layoutX="88.0" layoutY="182.0" prefHeight="26.0" prefWidth="264.0" />
+      <Button fx:id="btnOK" layoutX="319.0" layoutY="305.0" mnemonicParsing="false" onAction="#clickOK" text="OK" />
+      <Label layoutX="39.0" layoutY="46.0" text="Nome" />
+      <Label layoutX="24.0" layoutY="186.0" text="Endereço" />
+      <Label layoutX="27.0" layoutY="100.0" text="Telefone" />
+      <HBox alignment="CENTER" layoutX="89.0" layoutY="95.0" prefHeight="26.0" prefWidth="264.0" spacing="10.0">
+         <children>
+            <TextField fx:id="txtDDI" prefHeight="26.0" prefWidth="33.0" />
+            <TextField fx:id="txtDDD" prefHeight="26.0" prefWidth="33.0" />
+            <TextField fx:id="txtTel" prefHeight="26.0" prefWidth="177.0" />
+         </children>
+      </HBox>
+      <TextField fx:id="txtEmail" layoutX="88.0" layoutY="239.0" prefHeight="26.0" prefWidth="264.0" />
+      <Button fx:id="btnCancel" layoutX="244.0" layoutY="305.0" mnemonicParsing="false" onAction="#clickCancel" text="Cancelar" />
+      <Label layoutX="41.0" layoutY="243.0" text="Email" />
+      <HBox alignment="CENTER" layoutX="24.0" layoutY="139.0" prefHeight="26.0" prefWidth="328.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="rbtnComercial" contentDisplay="CENTER" mnemonicParsing="false" text="Comercial">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipoTel" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbtnResidencial" contentDisplay="CENTER" mnemonicParsing="false" selected="true" text="Residencial" toggleGroup="$TipoTel" />
+            <RadioButton fx:id="rbtnCelular" contentDisplay="CENTER" mnemonicParsing="false" text="Celular" toggleGroup="$TipoTel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
